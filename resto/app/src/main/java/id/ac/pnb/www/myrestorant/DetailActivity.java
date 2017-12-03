@@ -2,21 +2,43 @@ package id.ac.pnb.www.myrestorant;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DetailActivity extends AppCompatActivity {
 
-    TextView tv_menu_name, tv_menu_price;
+    private TextView tv_menu_name, tv_menu_price;
+    private String nama, price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
         setupEnv();
-        String nama = getIntent().getStringExtra("name");
-        String price = getIntent().getStringExtra("price");
+
+        nama = getIntent().getStringExtra("name");
+        price = getIntent().getStringExtra("price");
         setData(nama, price);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_detail, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.mn_shopping_cart:
+                Toast.makeText(this, "Anda membeli " + nama + " seharga " + price, Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void setupEnv() {
