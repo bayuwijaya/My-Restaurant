@@ -18,7 +18,6 @@ public class ListActivity extends AppCompatActivity {
     private RecyclerView rv_list;
     private RestaurantAdapter adapter;
     private List<MenuData> list;
-    private MenuItem mi_shoppingcart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +37,6 @@ public class ListActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

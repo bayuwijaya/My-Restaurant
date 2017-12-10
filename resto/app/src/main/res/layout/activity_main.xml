@@ -7,16 +7,22 @@
     android:layout_height="match_parent"
     tools:context="id.ac.pnb.www.myrestorant.MainActivity">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#fad155" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
-        <ImageView
+        <com.jackandphantom.circularimageview.CircleImage
             android:layout_width="128dp"
             android:layout_height="128dp"
-            android:src="@drawable/food" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/pantai_pink" />
 
         <LinearLayout
             android:layout_width="wrap_content"

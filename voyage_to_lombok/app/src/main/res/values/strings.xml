@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Voyage To Lombok</string>
+
+    <color name="ungu">#9C27B0</color>
+    <color name="biru">#2799b0</color>
+    <color name="biruterang">#07918b</color>
+    <color name="silver">#9E9E9E</color>
+    <color name="putih">#ffffff</color>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
